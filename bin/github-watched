@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.join(File.dirname(__FILE__), "/../lib"))
+require 'github-watched'
+
+user = GitHubWatched::API::User.new(GitHubWatched::Config.github_username)
+user.watched.each do |repo|
+  puts "#{repo.html_url} #{repo.description}"
+end
