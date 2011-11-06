@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 $:.unshift(File.join(File.dirname(__FILE__), "/../lib"))
-require 'github-watched'
+require 'github_watched'
 
 user = GitHubWatched::API::User.new(GitHubWatched::Config.github_username)
 user.watched.each do |repo|
