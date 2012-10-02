@@ -1,6 +1,8 @@
+require 'shellwords'
+
 module GitHubWatched::Config
   def self.git_config(name)
-    value = `git config --get #{name}`.chomp
+    value = `git config --get #{Shellwords.escape name}`.chomp
     value if $?.success?
   end
 
