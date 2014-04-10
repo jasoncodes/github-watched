@@ -3,6 +3,7 @@ require 'octocat_herder'
 module GitHubWatched::API
   class Base
     def connection
+      OctocatHerder::Connection.headers['User-Agent'] = "github-watched/#{GitHubWatched::VERSION} (+https://github.com/jasoncodes/github-watched)"
       @connection ||= OctocatHerder::Connection.new
     end
 
