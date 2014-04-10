@@ -17,5 +17,4 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'octocat_herder', '>= 0.1.2'
 
   gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'gem-release'
 end
